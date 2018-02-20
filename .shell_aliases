@@ -1,0 +1,25 @@
+#================= Aliases ===============#
+
+# git
+alias g="git"
+alias gconfig="vim /Users/adamlancaster/dotfiles/.gitconfig"
+alias gglobig="vim /Users/adamlancaster/dotfiles/.gitignore_global"
+
+# ZSH / Shell
+alias zshconfig="vim /Users/adamlancaster/dotfiles/.zshrc"
+alias sauce="source /Users/adamlancaster/dotfiles/.zshrc"
+alias middle="tput cup $(($(tput lines) / 2))"
+alias fish="yes ghoti | xargs say -v cello"
+alias showaliases="cat /Users/adamlancaster/dotfiles/.zshrc | grep alias"
+
+# tree
+# alias bonsai="tree -I 'tmp|node_modules|bower_components'"
+
+# Rake
+alias rake='noglob rake'
+
+# Vim
+alias vimconfig="vim /Users/adamlancaster/dotfiles/.vimrc"
+
+# Ruby
+alias rspec="bundle exec rspec"
