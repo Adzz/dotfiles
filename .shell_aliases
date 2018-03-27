@@ -2,15 +2,16 @@
 
 # git
 alias g="git"
-alias gconfig="vim /Users/adamlancaster/dotfiles/.gitconfig"
-alias gglobig="vim /Users/adamlancaster/dotfiles/.gitignore_global"
+alias gconfig="vim ~/dotfiles/.gitconfig"
+alias gglobig="vim ~/dotfiles/.gitignore_global"
 
 # ZSH / Shell
-alias zshconfig="vim /Users/adamlancaster/dotfiles/.zshrc"
-alias sauce="source /Users/adamlancaster/dotfiles/.zshrc"
+alias zshconfig="vim ~/dotfiles/.zshrc"
+alias aliases="vim ~/dotfiles/.shell_aliases"
+alias sauce="source ~/dotfiles/.zshrc"
 alias middle="tput cup $(($(tput lines) / 2))"
 alias fish="yes ghoti | xargs say -v cello"
-alias showaliases="cat /Users/adamlancaster/dotfiles/.zshrc | grep alias"
+alias showaliases="cat ~/dotfiles/.zshrc | grep alias"
 
 # tree
 # alias bonsai="tree -I 'tmp|node_modules|bower_components'"
@@ -19,7 +20,7 @@ alias showaliases="cat /Users/adamlancaster/dotfiles/.zshrc | grep alias"
 alias rake='noglob rake'
 
 # Vim
-alias vimconfig="vim /Users/adamlancaster/dotfiles/.vimrc"
+alias vimconfig="vim ~/dotfiles/.vimrc"
 
 # Ruby
 alias rspec="bundle exec rspec"
