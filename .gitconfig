@@ -4,6 +4,7 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = ~/.gitignore_global
+	hooksPath = /Users/adamlancaster/dotfiles/.git-templates/hooks
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -38,4 +39,9 @@
   pushn = push -u origin HEAD
   pull = "!git pull -p"
   acaf = "!git add --all && git commit --amend --no-edit"
+  aca = "!git add --all && git commit --amend"
 
+[vain]
+  default = faded
+[init]
+	templatedir = ~/dotfiles/.git-templates

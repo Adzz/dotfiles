@@ -47,16 +47,16 @@ source $ZSH/oh-my-zsh.sh
 # some are sensitive so they are stored in the
 # unsuspecting file name here:
 
-if [ -f /Users/adamlancaster/dotfiles/.scunthorpe_history ]; then
-  source /Users/adamlancaster/dotfiles/.scunthorpe_history
+if [ -f ~/.scunthorpe_history ]; then
+  source ~/.scunthorpe_history
 fi
 
 #================= Aliases ===============#
 
 # Saucey aliases
 
-if [ -f /Users/adamlancaster/dotfiles/.shell_aliases ]; then
-  source /Users/adamlancaster/dotfiles/.shell_aliases
+if [ -f ~/dotfiles/.shell_aliases ]; then
+  source ~/dotfiles/.shell_aliases
 fi
 
 #================ OTHER =================#

@@ -42,6 +42,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
@@ -96,6 +97,8 @@ nnoremap <leader>pi :PlugInstall<cr>
 nnoremap <leader>u :GundoToggle<CR>
 "insert pry for elixir
 nmap <leader>b orequire IEx;IEx.pry()<ESC>
+"pipe the thing into inspect
+nmap <leader>i i\|>IO.inspect()<ESC>
 "cycle through open buffers buffer
 nmap <tab> :w<CR>:bnext<CR>
 " we need shift tab to do reverse
@@ -108,8 +111,10 @@ nnoremap \ :Ack<SPACE>
 " <cr> so that we can add a line number to the end of the %:p , or add --only
 " and a tag
 nmap <leader>ss :!iex -S mix test %:p --trace
-" run mix formatter in 1.6
-nmap <leader>fo :!mix format<cr>
+" re-indent entire file, returning cursor to position you started at
+nmap <leader>== mzgg=G`z
+"run mix formatter on the current file
+nmap <leader>mf :!mix format %:p<cr><cr>
 
 " Plugin Settings
 " ----------------
@@ -132,9 +137,9 @@ endif
 "CtrlP
 "-----
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
-    \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
-    \ }
+      \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
+      \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
+      \ }
 nnoremap <leader>o :CtrlP<CR>
 
 "vim-test
@@ -188,6 +193,11 @@ endfunction
 " Fuzzy select one of those. Open the selected file with :e.
 "nnoremap <leader>k :call SelectaCommand("find * -type f", "", ":e")<cr>
 
+" Mix Formatter: https://github.com/mhinz/vim-mix-format
+" run formatter on save
+"let g:mix_format_on_save = 1
+
+
 "BASIC USE SETTINGS
 "------------------
 " Persistent undo - this is so undo history is not lost when you switch
@@ -211,7 +221,7 @@ set updatetime=250             "If this many milliseconds nothing is typed the s
 "DISPLAY SETINGS
 "---------------
 if !exists("g:syntax_on")
-    syntax enable
+  syntax enable
 endif                          "Allow syntax highlighting, see here https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript
 set t_Co=256                   " sets colour did this because here: https://github.com/mhartington/oceanic-next the oceanic next theme said so
 filetype plugin indent on      "Detect filetype, set the approppriate indent for the filetype, and allow filetype specific plugins
@@ -254,5 +264,5 @@ set softtabstop=2              "How many columns vim uses when you hit Tab in in
 
 set pastetoggle=<C-p>          "Sets ctrl + p to enter paste mode, allows unmodified pasting from other applications
 set clipboard=unnamed          "Use system clipboard
-                               "Below, non recursively maps ctrl + p to changing paste mode.
+"Below, non recursively maps ctrl + p to changing paste mode.
 nnoremap <C-p> :set invpaste paste?<CR>

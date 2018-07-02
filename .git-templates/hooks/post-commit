@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# use git vain to prepend the sha with a word
+./.git/hooks/gitvain
