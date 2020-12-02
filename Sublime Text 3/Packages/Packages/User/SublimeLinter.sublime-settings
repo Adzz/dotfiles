@@ -1,0 +1,13 @@
+// SublimeLinter Settings - User
+{
+  "paths": {
+    "linux": [],
+    "osx": ["/Users/Adz/.asdf/shims/elixir", "/Users/Adz/.asdf/shims/node", "/usr/local/bin/"],
+    "windows": []
+  },
+  "linters": {
+    "eslint": {
+      "env": {"PATH":"/usr/local/bin/"}
+    }
+  }
+}

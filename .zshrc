@@ -1,13 +1,14 @@
 #======== PATH =======#
 
 export PATH=$HOME/bin:~/bin:/usr/local/bin:$PATH
-export ZSH=/Users/adamlancaster/.oh-my-zsh
+export ZSH=/Users/adz/.oh-my-zsh
 export PATH="${PATH}:./node_modules/.bin"
 
 
 #===================== THEME =====================#
 
-ZSH_THEME="refined"
+source $ZSH/oh-my-zsh.sh
+ZSH_THEME=""
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -39,18 +40,22 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 #================= ENV VARS ================#
 
 # our env vars file can be found in 1password
 # some are sensitive so they are stored in the
 # unsuspecting file name here:
 
-if [ -f ~/.scunthorpe_history ]; then
-  source ~/.scunthorpe_history
+if [ -f ~/dotfiles/.scunthorpe_history ]; then
+  source ~/dotfiles/.scunthorpe_history
 fi
 
+export ERL_AFLAGS="-kernel shell_history enabled"
+# This is an issue with stuff and things...https://github.com/asdf-vm/asdf-erlang
+# https://github.com/kerl/kerl#compiling-crypto-on-macs
+export KERL_CONFIGURE_OPTIONS="--without-javac"
+# Fuck gatsby metric collection.
+export GATSBY_TELEMETRY_DISABLED=1
 #================= Aliases ===============#
 
 # Saucey aliases
@@ -63,3 +68,6 @@ fi
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/gcloud/application_default_credentials.json"
+

@@ -1,0 +1,59 @@
+{
+	"added_words":
+	[
+		"backend",
+		"changeset",
+		"ok",
+		"struct",
+		"Ecto",
+		"arity",
+		"labour",
+		"Toolstation"
+	],
+	"auto_complete_commit_on_tab": true,
+	"caret_style": "wide",
+	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
+	"detect_indentation": false,
+	"draw_indent_guides": true,
+	"ensure_newline_at_eof_on_save": false,
+	"file_exclude_patterns":
+	[
+		".tags",
+		".tags_sorted_by_file",
+		".gemtags",
+		"node_modules",
+		"*.beam",
+		"deps",
+		"volumes"
+	],
+	"flatland_sidebar_tree_small": true,
+	"flatland_square_tabs": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".build",
+		"*.beam",
+		"_build",
+		"node_modules",
+		"volumes"
+	],
+	"font_face": "Monaco",
+	"font_size": 14.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"rulers":
+	[
+		98
+	],
+	"show_definitions": false,
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

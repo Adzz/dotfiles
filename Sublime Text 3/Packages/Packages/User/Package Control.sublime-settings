@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Babel",
+		"Case Conversion",
+		"Elixir",
+		"Git blame",
+		"GitGutter",
+		"HTMLBeautify",
+		"JsPrettier",
+		"MarkdownLivePreview",
+		"MarkdownPreview",
+		"Oceanic Next Color Scheme",
+		"Package Control",
+		"Python 3",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-terraform",
+		"SublimeLinter-eslint",
+		"Terrafmt",
+		"Terraform",
+		"TypeScript"
+	]
+}

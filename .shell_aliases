@@ -25,10 +25,6 @@ alias vimconfig="vim ~/dotfiles/.vimrc"
 # Ruby
 alias rspec="bundle exec rspec"
 
-# Refresh dev DB
-alias refreshdb="cd ~/Nested/local-stack/tools && noglob bundle exec rake db:download["nest"] && SANITISE_FOR_DEVELOPMENT=1 bundle exec rake db:restore\["nest"\] && cd -"
-
-
 # Navigation
 alias cdeggl="cd ~/Nested/eggl"
 
@@ -67,3 +63,10 @@ alias thematrix="ruby -r io/console -e '
      print \"\e[38;5;#{[22, 28, 34, 40, 46].sample}m\", to_ansi[now[:green], chars].join
      sleep 0.001
    end'"
+
+# Terraform
+alias tplan="terraform plan -out=./plan.tfplan"
+alias tapply="terraform apply ./plan.tfplan"
+
+# Make
+alias m="make"

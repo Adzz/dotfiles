@@ -1,0 +1,15 @@
+[
+  { "keys": ["ctrl+c", "ctrl+f"], "command": "copy_path"},
+  { "keys": ["ctrl+i"], "command": "insert", "args": {"characters": "|> IO.inspect(limit: :infinity, label: \"\")"}},
+  { "keys": ["ctrl+b"], "command": "insert", "args": {"characters": "require IEx;IEx.pry()"}},
+  { "keys": ["ctrl+j", "ctrl+t"], "command": "insert", "args": {"characters": "test(\"\", ()=>{\n\n})"}},
+  { "keys": ["ctrl+j", "ctrl+d"], "command": "insert", "args": {"characters": "describe(\"\", ()=>{\n\n})"}},
+  { "keys": ["ctrl+e", "ctrl+d"], "command": "insert", "args": {"characters": "describe \"\" do\n\t\nend "}},
+  { "keys": ["ctrl+e", "ctrl+t"], "command": "insert", "args": {"characters": "test \"\" do\n\t\nend "}},
+  { "keys": ["ctrl+c", "ctrl+l"], "command": "insert", "args": {"characters": "console.log("}},
+  { "keys": ["ctrl+j", "ctrl+r"], "command": "insert", "args": {"characters": "import React from \"react\"\n\nexport const Thing = (props) => {\n\tconst {} = props\n  return ( <div>Test</div>)\n}"}},
+  { "keys": ["super+r"], "command": "reveal_in_side_bar"},
+  { "keys": ["super+r", "super+r"], "command": "focus_side_bar"},
+  { "keys": ["ctrl+n"], "command": "advanced_new_file_new"},
+  { "keys": ["ctrl+d", "ctrl+f"], "command": "advanced_new_file_delete", "args": {"current": true}},
+]
